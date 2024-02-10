@@ -1,5 +1,8 @@
 const jwt = require("jsonwebtoken");
 const {secret} = require("../config");
+
+//Проверка токена, для авторизации и проверка доступа по ролям
+
 module.exports = function (roles){
     return function (req, res, next){
         if (req.method === "OPTIONS") {
